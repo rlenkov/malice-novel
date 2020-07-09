@@ -35,6 +35,7 @@ const Posts = () => {
         const title = node.frontmatter.title || node.fields.slug
         return (
             <PostBox
+                key={`post-box-${node.fields.slug}`}
                 slug={node.fields.slug}
                 title={title}
                 date={node.frontmatter.date}

@@ -1,26 +1,52 @@
 @import '../../styles/index';
 
 .header {
+    position: relative;
     text-align: center;
     margin: 0;
-    padding-top: 3vh;
-    background: rgb(113, 9, 52);
-    background: radial-gradient(
-        circle,
-        rgba(113, 9, 52, 1) 0%,
-        rgba(47, 3, 20, 1) 69%
-    );
+    height: 800px;
+    max-height: 800px;
+    overflow: hidden;
     svg {
-        position: relative;
-        bottom: -10px;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        z-index: $over-header-z;
+    }
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 }
 
+.header::after {
+    content: '';
+    height: 800px;
+    z-index: $header-z;
+    background: rgb(113, 9, 52);
+    background: radial-gradient(
+        circle,
+        rgba(113, 9, 52, 0.9) 0%,
+        rgba(47, 3, 20, 0.9) 69%
+    );
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+}
+
 .title {
+    position: relative;
+    top: 150px;
     @include header-base;
     text-decoration: none;
     color: white;
-    padding-bottom: 18vh;
+    z-index: $over-header-z;
+    margin: 0;
 }
 
 .arrow {

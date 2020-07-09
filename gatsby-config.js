@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
     siteMetadata: {
         title: `Malice`,
@@ -46,6 +48,17 @@ module.exports = {
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
                 ],
+            },
+        },
+        {
+            resolve: 'gatsby-source-s3-asset',
+            options: {
+                bucketName: 'malice-resources',
+                domain: 's3.eu-central-1.amazonaws.com',
+                protocol: 'https', // [optional] Default to `https`.
+                publicDomain: 'malice-resources.s3.eu-central-1.amazonaws.com',
+                accessKeyId: process.env.S3_ACCESS_ID, // You can also use something like process.env.AWS_ACCESS_KEY
+                secretAccessKey: process.env.S3_ACCESS_KEY,
             },
         },
         {
