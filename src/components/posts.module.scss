@@ -1,0 +1,12 @@
+@import '../../styles/index';
+
+.container {
+    background-color: $abyss;
+    padding: 50px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import PostBox from '../components/postBox'
 
+import styles from './posts.module.scss'
+
 const Posts = () => {
     const data = useStaticQuery(
         graphql`
@@ -29,7 +31,7 @@ const Posts = () => {
 
     const posts = data.allMarkdownRemark.edges
 
-    return posts.map(({ node }) => {
+    const postList = posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
             <PostBox
@@ -41,6 +43,8 @@ const Posts = () => {
             />
         )
     })
+
+    return <div className={styles.container}>{postList}</div>
 }
 
 export default Posts
