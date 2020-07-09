@@ -1,8 +1,16 @@
 @import '../../styles/index';
 
 .post-box {
-    border: 1px solid grey;
+    border: 3px solid #710934;
     padding: 30px;
-    width: 60%;
+    width: 30%;
+    height: 200px;
     margin-bottom: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.post-box:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
 }

@@ -1,17 +1,19 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 
 import styles from './postBox.module.scss'
 
 const PostBox = props => {
     return (
-        <article key={props.slug} className={styles.postBox}>
+        <article
+            key={props.slug}
+            className={styles.postBox}
+            onClick={() => {
+                navigate(props.slug)
+            }}
+        >
             <header>
-                <h3 style={{}}>
-                    <Link style={{ boxShadow: `none` }} to={props.slug}>
-                        {props.title}
-                    </Link>
-                </h3>
+                <h3 style={{}}>{props.title}</h3>
                 <small>{props.date}</small>
             </header>
             <section>

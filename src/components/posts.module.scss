@@ -2,11 +2,11 @@
 
 .container {
     background-color: $abyss;
-    padding: 50px 0;
+    padding: 50px 10%;
     color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
