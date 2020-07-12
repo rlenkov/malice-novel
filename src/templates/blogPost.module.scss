@@ -1,7 +1,26 @@
-.test-class {
-    color: red;
+@import '../../styles/index';
+
+.article {
+    padding: 30px;
+    background: $abyss;
+    color: $heaven;
+    min-height: 100vh;
+    @include post-content;
+    @include for-desktop {
+        padding: 30px 15%;
+    }
 }
 
-.random {
-    color: purple;
+.nav-bar {
+    background-color: $abyss;
+    margin: 0;
+    padding: 30px;
+    ul {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: $grace;
+        @include link-pager;
+    }
 }

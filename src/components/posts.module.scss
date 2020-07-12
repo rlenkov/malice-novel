@@ -1,12 +1,46 @@
 @import '../../styles/index';
 
 .container {
+    position: relative;
     background-color: $abyss;
-    padding: 50px 10%;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    padding-top: 50px;
+    @include for-desktop {
+        padding-top: 150px;
+    }
+    $my-size: 0.8px;
+    background-image: radial-gradient(
+            rgb(58, 5, 54) $my-size,
+            transparent $my-size
+        ),
+        radial-gradient(rgb(113, 9, 104) $my-size, transparent $my-size);
+    background-size: calc(20 * #{$my-size}) calc(20 * #{$my-size});
+    background-position: 0 0, calc(20 * #{$my-size}) calc(20 * #{$my-size});
+    @include for-desktop {
+        $my-size: 2px;
+        background-image: radial-gradient(
+                rgb(58, 5, 54) $my-size,
+                transparent $my-size
+            ),
+            radial-gradient(rgb(113, 9, 104) $my-size, transparent $my-size);
+        background-size: calc(20 * #{$my-size}) calc(20 * #{$my-size});
+        background-position: 0 0, calc(20 * #{$my-size}) calc(20 * #{$my-size});
+    }
+}
+
+.container::after {
+    content: '';
+    height: 100px;
+    width: 100%;
+    @include for-desktop {
+        height: 200px;
+    }
+    // z-index: $header-z;
+    background: rgb(13, 11, 18);
+    background: linear-gradient(
+        rgba(13, 11, 18, 1) 0%,
+        rgba(13, 11, 18, 0) 100%
+    );
+    top: 0;
+    left: 0;
+    position: absolute;
 }

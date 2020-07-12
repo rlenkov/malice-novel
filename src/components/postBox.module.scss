@@ -1,17 +1,43 @@
 @import '../../styles/index';
 
 .post-box {
-    border: 3px solid #710934;
     padding: 30px;
-    width: 30%;
-    height: 200px;
-    margin-bottom: 50px;
-    border-radius: 15px;
-    cursor: pointer;
-    @include pattern-cross-dots-sm;
+    width: auto;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    color: $grace;
+    header {
+        cursor: pointer;
+    }
+    h3 {
+        @include post-title;
+        color: $sin;
+        margin: 0;
+        background-image: repeating-linear-gradient(
+            45deg,
+            currentColor 0px,
+            currentColor 3px,
+            transparent 0%,
+            transparent 50%
+        );
+        background-size: 10px 10px;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: -5px -5px 0px $grace;
+    }
+    @include for-desktop {
+        width: 50%;
+        margin: auto;
+    }
 }
 
-.post-box:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
+.post-section {
+    margin: 10px;
+    align-self: center;
+    cursor: pointer;
+    p {
+        @include post-content;
+    }
 }

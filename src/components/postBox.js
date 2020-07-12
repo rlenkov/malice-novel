@@ -5,18 +5,21 @@ import styles from './postBox.module.scss'
 
 const PostBox = props => {
     return (
-        <article
-            key={props.slug}
-            className={styles.postBox}
-            onClick={() => {
-                navigate(props.slug)
-            }}
-        >
-            <header>
-                <h3 style={{}}>{props.title}</h3>
+        <article key={props.slug} className={styles.postBox}>
+            <header
+                onClick={() => {
+                    navigate(props.slug)
+                }}
+            >
+                <h3>{props.title}</h3>
                 <small>{props.date}</small>
             </header>
-            <section>
+            <section
+                className={styles.postSection}
+                onClick={() => {
+                    navigate(props.slug)
+                }}
+            >
                 <p
                     dangerouslySetInnerHTML={{
                         __html: props.description || props.excerpt,

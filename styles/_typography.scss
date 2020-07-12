@@ -12,3 +12,46 @@
         font-size: 40px;
     }
 }
+
+
+@mixin post-title {
+    font-family: 'Grenze+Gotisch';
+    font-size: 60px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $grace;
+    @include for-desktop {
+        font-size: 60px;
+    }
+}
+
+@mixin post-content {
+    font-family: 'Crimson+Text';
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $grace;
+    @include for-desktop {
+        font-size: 22px;
+    }
+}
+
+@mixin link-pager {
+    font-family: 'Grenze+Gotisch';
+    font-size: 30px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $grace;
+    @include for-desktop {
+        font-size: 30px;
+    }
+}

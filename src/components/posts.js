@@ -20,7 +20,6 @@ const Posts = () => {
                             frontmatter {
                                 date(formatString: "MMMM DD, YYYY")
                                 title
-                                description
                             }
                         }
                     }

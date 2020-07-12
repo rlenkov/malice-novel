@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title
     return (
         <Layout location={location} title={siteTitle}>
-            <SEO title='All posts' />
+            <SEO title='Story' />
             <Posts />
         </Layout>
     )

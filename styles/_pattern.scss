@@ -115,8 +115,8 @@
     background-size: calc(10 * 2px) calc(10 * 2px);
 }
 @mixin pattern-cross-dots-sm {
-    background-image: radial-gradient(currentColor 0.5px, transparent 0.5px),
-        radial-gradient(currentColor 0.5px, transparent 0.5px);
+    background-image: radial-gradient(white 0.5px, transparent 0.5px),
+        radial-gradient(white 0.5px, transparent 0.5px);
     background-size: calc(20 * 0.5px) calc(20 * 0.5px);
     background-position: 0 0, calc(10 * 0.5px) calc(10 * 0.5px);
 }

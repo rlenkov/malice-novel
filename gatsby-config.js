@@ -70,6 +70,15 @@ module.exports = {
                         subsets: [`latin`],
                         variants: [`200`, `300`, `400`, `600`, `700`, `800`],
                     },
+                    {
+                        family: `Grenze Gotisch`,
+                        subsets: [`latin`],
+                        variants: [`100`, `400`, `700`, `900`],
+                    },
+                    {
+                        family: `Crimson Text`,
+                        variants: [`400`, `600`, `700`],
+                    },
                 ],
             },
         },
