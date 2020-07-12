@@ -1,11 +1,18 @@
 @import '../../styles/index';
 
+$header-height: 300px;
+$header-height-desktop: 600px;
+
 .header {
     position: relative;
     text-align: center;
     margin: 0;
-    height: 800px;
-    max-height: 800px;
+    height: $header-height;
+    max-height: $header-height;
+    @include for-desktop {
+        height: $header-height-desktop;
+        max-height: $header-height-desktop;
+    }
     overflow: hidden;
     svg {
         position: absolute;
@@ -23,13 +30,16 @@
 
 .header::after {
     content: '';
-    height: 800px;
+    height: $header-height;
+    @include for-desktop {
+        height: $header-height-desktop;
+    }
     z-index: $header-z;
     background: rgb(113, 9, 52);
-    background: radial-gradient(
-        circle,
-        rgba(113, 9, 52, 0.9) 0%,
-        rgba(47, 3, 20, 0.9) 69%
+    background: linear-gradient(
+        rgba(25, 2, 31, 0.8) 0%,
+        rgb(42, 3, 47) 49%,
+        rgba(47, 3, 20, 1) 100%
     );
     top: 0;
     left: 0;
@@ -39,14 +49,29 @@
     z-index: 0;
 }
 
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #e60073;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    to {
+        text-shadow: 0 0 3px #fff, 0 0 6px #ff4da6, 0 0 12px #ff4da6;
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
 .title {
     position: relative;
-    top: 150px;
+    top: 120px;
     @include header-base;
-    text-decoration: none;
     color: white;
     z-index: $over-header-z;
     margin: 0;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
 }
 
 .arrow {

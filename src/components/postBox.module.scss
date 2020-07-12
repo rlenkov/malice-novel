@@ -8,6 +8,7 @@
     margin-bottom: 50px;
     border-radius: 15px;
     cursor: pointer;
+    @include pattern-cross-dots-sm;
 }
 
 .post-box:hover {
