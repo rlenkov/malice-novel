@@ -18,10 +18,14 @@ export const Header = props => {
             video: s3Asset(id: { eq: "f087938d-a6eb-5dcf-bf9d-9c73579f3ed7" }) {
                 url
             }
+            image: s3Asset(id: { eq: "b42b8177-a4ea-5769-83fb-c5842eb0eeb1" }) {
+                url
+            }
         }
     `)
     return (
         <div className={styles.header}>
+            <div className={styles.stars} style={{background: `#000 url(${data.image.url}) repeat top center`}}></div>
             <video id='background-video' autoPlay muted loop playsInline>
                 <source
                     src={data.video.url}

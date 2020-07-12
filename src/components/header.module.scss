@@ -7,6 +7,7 @@ $header-height-desktop: 700px;
     position: relative;
     text-align: center;
     margin: 0;
+    background: rgba(9, 8, 14, 1);
     height: $header-height;
     max-height: $header-height;
     @include for-desktop {
@@ -28,12 +29,24 @@ $header-height-desktop: 700px;
         bottom: 0px;
         left: 0;
         width: 100%;
-        -moz-transform:scale(1.6);
-        -webkit-transform:scale(1.6);
-        -o-transform:scale(1.6);
-        -ms-transform:scale(1.6);
-        transform:scale(1.6);
+        -moz-transform: scale(1.6);
+        -webkit-transform: scale(1.6);
+        -o-transform: scale(1.6);
+        -ms-transform: scale(1.6);
+        transform: scale(1.6);
+        @include for-desktop {
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
     }
+}
+
+.stars {
+    width: auto;
+    min-height: 200px;
 }
 
 .header::after {
@@ -45,12 +58,24 @@ $header-height-desktop: 700px;
     z-index: $header-z;
     background: rgb(113, 9, 52);
     background: linear-gradient(
-        rgb(9, 8, 14) 0%,
-        rgb(42, 23, 59) 25%,
-        rgba(109, 42, 94, 1) 50%,
+        rgba(9, 8, 14, 0.5) 0%,
+        rgb(42, 23, 59) 35%,
+        rgb(70, 31, 80) 50%,
+        rgba(97, 38, 84, 0.9) 60%,
         rgba(113, 9, 52, 0.6) 75%,
-        rgba(185, 97, 128, 1) 100%
+        rgba(187, 64, 107, 0.7) 100%
     );
+    @include for-desktop {
+        background: rgb(113, 9, 52);
+        background: linear-gradient(
+            rgb(9, 8, 14) 0%,
+            rgba(42, 23, 59, 0.9) 35%,
+            rgba(70, 31, 80, 0.8) 50%,
+            rgba(97, 38, 84, 0.6) 60%,
+            rgba(113, 9, 52, 0.6) 75%,
+            rgba(185, 97, 128, 1) 100%
+        );
+    }
     top: 0;
     left: 0;
     bottom: 0;
@@ -74,7 +99,7 @@ $header-height-desktop: 700px;
 
 .title {
     position: relative;
-    top: 180px;
+    top: 20px;
     @include header-base;
     color: $heaven;
     z-index: $over-header-z;
