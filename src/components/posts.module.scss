@@ -9,19 +9,19 @@
     }
     $my-size: 0.8px;
     background-image: radial-gradient(
-            rgb(58, 5, 54) $my-size,
+            rgb(78, 12, 73) $my-size,
             transparent $my-size
         ),
-        radial-gradient(rgb(113, 9, 104) $my-size, transparent $my-size);
+        radial-gradient(rgb(78, 12, 73) $my-size, transparent $my-size);
     background-size: calc(20 * #{$my-size}) calc(20 * #{$my-size});
     background-position: 0 0, calc(20 * #{$my-size}) calc(20 * #{$my-size});
     @include for-desktop {
         $my-size: 2px;
         background-image: radial-gradient(
-                rgb(58, 5, 54) $my-size,
+                rgb(78, 12, 73) $my-size,
                 transparent $my-size
             ),
-            radial-gradient(rgb(113, 9, 104) $my-size, transparent $my-size);
+            radial-gradient(rgb(78, 12, 73) $my-size, transparent $my-size);
         background-size: calc(20 * #{$my-size}) calc(20 * #{$my-size});
         background-position: 0 0, calc(20 * #{$my-size}) calc(20 * #{$my-size});
     }
@@ -38,7 +38,7 @@
     background: rgb(13, 11, 18);
     background: linear-gradient(
         rgba(13, 11, 18, 1) 0%,
-        rgba(13, 11, 18, 0) 100%
+        rgba(47, 57, 80, 0) 100%
     );
     top: 0;
     left: 0;

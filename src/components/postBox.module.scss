@@ -37,6 +37,7 @@
 .post-section {
     margin: 10px;
     align-self: center;
+    padding: 5px;
     cursor: pointer;
     p {
         @include post-content;

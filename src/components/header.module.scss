@@ -1,6 +1,6 @@
 @import '../../styles/index';
 
-$header-height: 300px;
+$header-height: 500px;
 $header-height-desktop: 700px;
 
 .header {
@@ -25,9 +25,14 @@ $header-height-desktop: 700px;
     }
     video {
         position: absolute;
-        top: 0;
+        bottom: 0px;
         left: 0;
         width: 100%;
+        -moz-transform:scale(1.6);
+        -webkit-transform:scale(1.6);
+        -o-transform:scale(1.6);
+        -ms-transform:scale(1.6);
+        transform:scale(1.6);
     }
 }
 
@@ -40,9 +45,11 @@ $header-height-desktop: 700px;
     z-index: $header-z;
     background: rgb(113, 9, 52);
     background: linear-gradient(
-        rgba(25, 2, 31, 0.8) 0%,
-        rgb(42, 3, 47) 49%,
-        rgba(47, 3, 20, 1) 100%
+        rgb(9, 8, 14) 0%,
+        rgb(42, 23, 59) 25%,
+        rgba(109, 42, 94, 1) 50%,
+        rgba(113, 9, 52, 0.6) 75%,
+        rgba(185, 97, 128, 1) 100%
     );
     top: 0;
     left: 0;
@@ -60,14 +67,14 @@ $header-height-desktop: 700px;
     }
     to {
         text-shadow: 0 0 3px #fff, 0 0 6px #ff4da6, 0 0 12px #ff4da6;
-        -webkit-transform: translateY(8px);
-        transform: translateY(8px);
+        -webkit-transform: translateY(13px);
+        transform: translateY(13px);
     }
 }
 
 .title {
     position: relative;
-    top: 120px;
+    top: 180px;
     @include header-base;
     color: $heaven;
     z-index: $over-header-z;
