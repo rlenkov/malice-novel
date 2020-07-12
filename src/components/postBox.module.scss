@@ -10,27 +10,28 @@
     header {
         cursor: pointer;
     }
-    h3 {
-        @include post-title;
-        color: $sin;
-        margin: 0;
-        background-image: repeating-linear-gradient(
-            45deg,
-            currentColor 0px,
-            currentColor 3px,
-            transparent 0%,
-            transparent 50%
-        );
-        background-size: 10px 10px;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: -5px -5px 0px $grace;
-    }
     @include for-desktop {
         width: 50%;
         margin: auto;
     }
+}
+
+.postTitle {
+    @include post-title;
+    color: $sin;
+    margin: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        currentColor 0px,
+        currentColor 3px,
+        transparent 0%,
+        transparent 50%
+    );
+    background-size: 10px 10px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -5px -5px 0px $grace;
 }
 
 .post-section {

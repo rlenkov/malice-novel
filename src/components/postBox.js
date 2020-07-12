@@ -11,7 +11,7 @@ const PostBox = props => {
                     navigate(props.slug)
                 }}
             >
-                <h3>{props.title}</h3>
+                <h3 className={styles.postTitle}>{props.title}</h3>
                 <small>{props.date}</small>
             </header>
             <section
