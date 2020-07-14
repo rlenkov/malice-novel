@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useStaticQuery, graphql, navigate } from 'gatsby'
+import Sky from '../components/addons/sky'
 import PropTypes from 'prop-types'
 
 import styles from './header.module.scss'
@@ -25,7 +26,8 @@ export const Header = props => {
     `)
     return (
         <div className={styles.header}>
-            <div className={styles.stars} style={{background: `#000 url(${data.image.url}) repeat top center`}}></div>
+            {/* <div className={styles.stars} style={{background: `#000 url(${data.image.url}) repeat top center`}}></div> */}
+            <Sky />
             <video id='background-video' autoPlay muted loop playsInline>
                 <source
                     src={data.video.url}

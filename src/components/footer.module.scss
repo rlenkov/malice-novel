@@ -5,4 +5,16 @@
     text-align: center;
     padding: 50px 0;
     color: white;
+    p {
+        text-decoration: none;
+        font-family: 'Grenze Gotisch';
+        font-size: 15px;
+        color: $dirt;
+    }
+    a {
+        text-decoration: none;
+        font-family: 'Grenze Gotisch';
+        font-size: 18px;
+        color: $sin;
+    }
 }
