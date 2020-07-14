@@ -5,7 +5,11 @@ import styles from './postBox.module.scss'
 
 const PostBox = props => {
     return (
-        <article key={props.slug} className={styles.postBox}>
+        <article
+            key={props.slug}
+            id={`post-box-${props.slug}`}
+            className={props.visible ? styles.postBox : [styles.postBox, styles.hidden].join(' ')}
+        >
             <header
                 onClick={() => {
                     navigate(props.slug)
