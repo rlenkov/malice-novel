@@ -3,6 +3,42 @@
 .about-container {
     background-color: $abyss;
     min-height: 80vh;
-    padding: 50px;
+    padding-top: 50px;
     color: $heaven;
+    overflow: hidden;
+}
+
+.disclaimer {
+    text-align: center;
+}
+
+.header {
+    padding: 0 10%;
+    @include header-base;
+    font-size: 70px;
+    color: $sin;
+    margin: 0;
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 2px,
+        currentColor 1px,
+        currentColor
+    );
+    background-size: 10px 10px;
+
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -15px -15px 0px $grim;
+}
+
+.description {
+    margin-top: 100px;
+    width: 90%;
+    float: right;
+    p {
+        @include post-content;
+    }
 }
