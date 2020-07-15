@@ -4,13 +4,12 @@ module.exports = {
     siteMetadata: {
         title: `Malice`,
         author: {
-            name: `Richard lenkovits`,
-            summary: `who writes..`,
+            name: `Richard Lenkovits`,
         },
-        description: `A story about Anne`,
-        siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+        description: `There is no light.`,
+        siteUrl: `https://malice.com/`,
         social: {
-            twitter: `rlenkov`,
+            twitter: `malice`,
         },
     },
     plugins: [
@@ -79,6 +78,11 @@ module.exports = {
                         family: `Crimson Text`,
                         variants: [`400`, `600`, `700`],
                     },
+                    {
+                        family: `Roboto`,
+                        subsets: [`latin`],
+                        variants: [`400`, `600`, `700`],
+                    },
                 ],
             },
         },
@@ -95,13 +99,13 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Gatsby Starter Blog`,
-                short_name: `GatsbyJS`,
+                name: `Malice`,
+                short_name: `Malice`,
                 start_url: `/`,
-                background_color: `#ffffff`,
-                theme_color: `#663399`,
+                background_color: `#0d0b12`,
+                theme_color: `#710934`,
                 display: `minimal-ui`,
-                icon: `content/assets/gatsby-icon.png`,
+                icon: `content/assets/malice_logo.png`,
             },
         },
         `gatsby-plugin-react-helmet`,
