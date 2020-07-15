@@ -59,7 +59,7 @@
     }
     @include for-desktop {
         width: 50%;
-        margin: 200px 50px;
+        margin: 200px 50px 100px 50px;
     }
 }
 
@@ -111,7 +111,7 @@
     }
     @include for-desktop {
         width: 50%;
-        margin: 100px 50px;
+        margin: 100px 50px 200px 50px;
     }
 }
 
@@ -179,4 +179,9 @@
     button:hover {
         transform: scale(1.2);
     }
+}
+
+.powerful {
+    font-weight: bold;
+    color: $abyss;
 }

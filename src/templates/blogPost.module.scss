@@ -1,6 +1,7 @@
 @import '../../styles/index';
 
 .article {
+    position: relative;
     padding: 30px;
     background: $abyss;
     color: $heaven;
@@ -9,6 +10,31 @@
     @include for-desktop {
         padding: 30px 15%;
     }
+    overflow: hidden;
+}
+
+.head {
+    position: relative;
+    z-index: 5;
+}
+
+.illustration {
+    position: absolute;
+    top: 0;
+    right: 100vw;
+    z-index: 0;
+    opacity: 0.8;
+    width: 100vw;
+    @include for-desktop {
+        top: 0;
+        right: 0;
+        width: unset;
+    }
+}
+
+.section {
+    position: relative;
+    z-index: 5;
 }
 
 .nav-bar {
@@ -22,5 +48,11 @@
         text-decoration: none;
         color: $grace;
         @include link-pager;
+    }
+}
+
+.footer {
+    button {
+        margin-right: 15px;
     }
 }

@@ -56,12 +56,15 @@ const Bio = () => {
                 <p>Hello, I am Valerija Huszar, and this is my story.</p>
                 <p>
                     I used to be a clerk at the Imperial University, serving the
-                    corrupt s of Sandorgrad with knowledge and power. Now I'm
-                    something much more significant and dangerous.
+                    corrupt Oligarchs and statesman of Sandorgrad. But I've
+                    become something much more significant and dangerous.
                 </p>
                 <p>
-                    I was given a gift of fathomless darkness. Now I can't stop
-                    running.
+                    I was given a gift of{' '}
+                    <strong className={styles.powerful}>
+                        fathomless darkness
+                    </strong>
+                    . Now I can't stop running.
                 </p>
                 <div className={styles.illustration}>
                     <img src={radLinesOne} alt='Decoration of lines' />
@@ -71,12 +74,15 @@ const Bio = () => {
                 <p>
                     I must go through the highest towers and the deepest alleys
                     to find my answers amongst all the fake delights, whispered
-                    lies, and luxurious depravity. To understand that in this
+                    lies, and luxurious depravity of the city.
+                </p>
+                <p>
+                    But to understand it all, one must understand that in this
                     world, there is no light.
                 </p>
                 <p>
                     I'm Valerija Huszar, but you can call me{' '}
-                    <strong>Val.</strong>
+                    <strong className={styles.powerful}>Val.</strong>
                 </p>
                 <div className={styles.illustrationTwo}>
                     <img src={radLinesTwo} alt='Another decoration of lines' />
