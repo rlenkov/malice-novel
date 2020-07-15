@@ -26,8 +26,10 @@ export const Header = props => {
     `)
     return (
         <div className={styles.header}>
-            {/* <div className={styles.stars} style={{background: `#000 url(${data.image.url}) repeat top center`}}></div> */}
-            <Sky />
+            <div className={styles.stars}>
+                <Sky />
+            </div>
+
             <video id='background-video' autoPlay muted loop playsInline>
                 <source
                     src={data.video.url}

@@ -45,8 +45,10 @@ $header-height-desktop: 700px;
 }
 
 .stars {
-    width: auto;
-    min-height: 200px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .header::after {
@@ -92,21 +94,21 @@ $header-height-desktop: 700px;
     }
     to {
         text-shadow: 0 0 3px #fff, 0 0 6px #ff4da6, 0 0 12px #ff4da6;
-        -webkit-transform: translateY(13px);
-        transform: translateY(13px);
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
     }
 }
 
 .title {
     position: relative;
-    top: 20px;
+    top: 200px;
     @include header-base;
     color: $heaven;
     z-index: $over-header-z;
     margin: 0;
-    -webkit-animation: glow 3s ease-in-out infinite alternate;
-    -moz-animation: glow 3s ease-in-out infinite alternate;
-    animation: glow 3s ease-in-out infinite alternate;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 22s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 .arrow {

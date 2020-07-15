@@ -37,7 +37,7 @@
             comma
         );
     }
-    @return unquote($bxshadow);
+    @return $bxshadow;
 }
 
 $bxshadow-large: box-shadow(300);
@@ -56,7 +56,7 @@ $bxshadow-small: box-shadow(800);
     width: 2px;
     background: transparent;
     box-shadow: $bxshadow-medium;
-    animation: blink-medium 1s infinite;
+    animation: blink-medium 4s infinite;
 }
 .stars.small {
     height: 1px;
@@ -71,13 +71,13 @@ $bxshadow-small: box-shadow(800);
         box-shadow: $bxshadow-large;
     }
     70% {
-        $colors: '#ffff', 'transparent';
+        $colors: $heaven, transparent;
         $stars: $bxshadow-large;
         @for $i from 1 to length($stars) {
             $star: set-nth(
                 nth($stars, $i),
                 3,
-                unquote(nth($colors, random(length($colors))))
+                nth($colors, random(length($colors)))
             );
             $stars: set-nth($stars, $i, $star);
         }
@@ -92,13 +92,13 @@ $bxshadow-small: box-shadow(800);
         box-shadow: $bxshadow-medium;
     }
     70% {
-        $colors: '#ffff', 'transparent';
+        $colors: $heaven, transparent;
         $stars: $bxshadow-medium;
         @for $i from 1 to length($stars) {
             $star: set-nth(
                 nth($stars, $i),
                 3,
-                unquote(nth($colors, random(length($colors))))
+                nth($colors, random(length($colors)))
             );
             $stars: set-nth($stars, $i, $star);
         }
@@ -113,13 +113,13 @@ $bxshadow-small: box-shadow(800);
         box-shadow: $bxshadow-small;
     }
     70% {
-        $colors: '#ffff', 'transparent';
+        $colors: $heaven, transparent;
         $stars: $bxshadow-small;
         @for $i from 1 to length($stars) {
             $star: set-nth(
                 nth($stars, $i),
                 3,
-                unquote(nth($colors, random(length($colors))))
+                nth($colors, random(length($colors)))
             );
             $stars: set-nth($stars, $i, $star);
         }
