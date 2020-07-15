@@ -16,7 +16,7 @@ const Layout = ({ location, title, children }) => {
         <React.Fragment>
             <header>{header}</header>
             <main>{children}</main>
-            <Footer />
+            <Footer isRoot={location.pathname === rootPath} />
         </React.Fragment>
     )
 }

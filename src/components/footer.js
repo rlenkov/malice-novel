@@ -3,11 +3,15 @@ import { Link } from 'gatsby'
 
 import styles from './footer.module.scss'
 
-const Footer = () => {
+const Footer = props => {
     return (
         <footer className={styles.footer}>
             <p>{`© ${new Date().getFullYear()}, Malice`}</p>
-            <Link to='about'>About</Link>
+            {props.isRoot ? (
+                <Link to='about'>About</Link>
+            ) : (
+                <Link to='/'>Home</Link>
+            )}
         </footer>
     )
 }
