@@ -1,11 +1,21 @@
 @import '../../styles/index';
 
 .about-container {
+    position: relative;
     background-color: $abyss;
     min-height: 80vh;
     padding-top: 50px;
+    padding-bottom: 50px;
     color: $heaven;
     overflow: hidden;
+
+    background: rgb(113, 9, 52);
+    background: linear-gradient(
+        $abyss 10%,
+        rgba(42, 23, 59, 0.9) 50%,
+        rgba(74, 25, 87, 0.8) 70%,
+        $sin 100%
+    );
 }
 
 .disclaimer {
@@ -16,8 +26,11 @@
     padding: 0 10%;
     @include header-base;
     font-size: 70px;
+    @include for-desktop {
+        font-size: 90px;
+    }
     color: $sin;
-    margin: 0;
+    // margin: 0;
     background-image: repeating-linear-gradient(
         to right,
         transparent,
@@ -26,19 +39,144 @@
         currentColor
     );
     background-size: 10px 10px;
-
-
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: -15px -15px 0px $grim;
+    text-shadow: -15px -15px 0px rgba(48, 58, 82, 0.9),
+        0px 0px 15px rgba(194, 36, 75, 0.5);
 }
 
 .description {
-    margin-top: 100px;
-    width: 90%;
+    position: relative;
+    margin-top: 150px;
+    width: 60%;
     float: right;
+    margin-right: 20px;
     p {
+        position: relative;
+        z-index: 5;
         @include post-content;
+    }
+    @include for-desktop {
+        width: 50%;
+        margin: 200px 50px;
+    }
+}
+
+.illustration {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    img {
+        z-index: 0;
+        width: 500px;
+    }
+    @include for-desktop {
+        left: 10vw;
+        top: -15vw;
+        img {
+            width: 50vw;
+        }
+    }
+}
+
+.illustration-two {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    img {
+        z-index: 0;
+        width: 500px;
+    }
+    @include for-desktop {
+        right: 10vw;
+        top: -15vw;
+        img {
+            width: 50vw;
+        }
+    }
+}
+
+.description-two {
+    position: relative;
+    margin: 100px 20px;
+    width: 60%;
+    float: left;
+    p {
+        position: relative;
+        z-index: 5;
+        @include post-content;
+    }
+    @include for-desktop {
+        width: 50%;
+        margin: 100px 50px;
+    }
+}
+
+.more {
+    position: absolute;
+    width: 10%;
+    text-align: center;
+    bottom: 30px;
+    left: 45%;
+    right: 45%;
+    button {
+        cursor: pointer;
+        span {
+            @include post-content;
+            font-size: 20px;
+            font-style: italic;
+            color: $heaven;
+        }
+        background-color: transparent;
+        border: none;
+        outline: 0;
+    }
+    button:hover {
+        transform: scale(1.2);
+    }
+}
+
+.author-modal {
+    position: fixed;
+    z-index: $over-all-z;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(48, 58, 82, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    p {
+        width: 70%;
+        @include out-content;
+        font-size: 18px;
+        color: $heaven;
+    }
+    @include for-desktop {
+        p {
+            @include out-content;
+            font-size: 30px;
+            color: $heaven;
+        }
+    }
+    button {
+        cursor: pointer;
+        span {
+            @include post-content;
+            font-size: 30px;
+            font-style: italic;
+            color: $rose;
+        }
+        background-color: transparent;
+        border: none;
+        outline: 0;
+    }
+    button:hover {
+        transform: scale(1.2);
     }
 }
