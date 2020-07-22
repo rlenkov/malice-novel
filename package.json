@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "malice_novel",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A blog for the Malice novel.",
+  "version": "1.0.0",
+  "author": "Richard Lenkovits <richard.lenkovits@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -40,7 +40,7 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://bitbucket.org/pencillr/malice-novel/src/master/README.md",
   "keywords": [
     "gatsby"
   ],
@@ -48,7 +48,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git@bitbucket.org:pencillr/malice-novel.git"
   },
   "scripts": {
     "build": "gatsby build",

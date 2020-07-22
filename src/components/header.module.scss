@@ -138,4 +138,7 @@ $header-height-desktop: 700px;
 .small-header {
     height: 10vh;
     background-color: $abyss;
+    @include for-desktop {
+        min-height: 90px;
+    }
 }
