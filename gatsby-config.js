@@ -61,30 +61,16 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            resolve: `gatsby-plugin-google-fonts`,
             options: {
-                fonts: [
-                    {
-                        family: `Cinzel`,
-                        subsets: [`latin`],
-                        variants: [`200`, `300`, `400`, `600`, `700`, `800`],
-                    },
-                    {
-                        family: `Grenze Gotisch`,
-                        subsets: [`latin`],
-                        variants: [`100`, `400`, `700`, `900`],
-                    },
-                    {
-                        family: `Crimson Text`,
-                        variants: [`400`, `600`, `700`],
-                    },
-                    {
-                        family: `Roboto`,
-                        subsets: [`latin`],
-                        variants: [`400`, `600`, `700`],
-                    },
-                ],
-            },
+              fonts: [
+                `Cinzel\:200,300,400,600,700,800`,
+                `Grenze Gotisch\:100,400,700,900`,
+                `Crimson Text\:400,600,700`,
+                `Roboto\:400,600,700`,
+              ],
+              display: 'swap',
+            }
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,

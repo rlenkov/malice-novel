@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import radLinesOne from '../../content/assets/rad_lines_1.svg'
 import radLinesTwo from '../../content/assets/rad_lines_2.svg'
-import styles from './bio.module.scss'
+import * as styles from './bio.module.scss'
 
 const Bio = () => {
     const [modal, setModal] = useState(false)

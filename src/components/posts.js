@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import PostBox from '../components/postBox'
 
-import styles from './posts.module.scss'
+import * as styles from './posts.module.scss'
 
 const Posts = () => {
     const [observerState, setObserverState] = useState({})

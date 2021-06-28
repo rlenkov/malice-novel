@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './sky.module.scss'
+import * as styles from './sky.module.scss'
 
 const Sky = () => {
     return (

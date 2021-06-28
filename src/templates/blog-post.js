@@ -12,7 +12,7 @@ import SEO from '../components/seo'
 
 import radLinesDeco from '../../content/assets/rad_lines_3.svg'
 import 'normalize.css'
-import styles from './blogPost.module.scss'
+import * as styles from './blogPost.module.scss'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
     const post = data.markdownRemark

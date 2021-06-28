@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, navigate } from 'gatsby'
 import Sky from '../components/addons/sky'
 import PropTypes from 'prop-types'
 
-import styles from './header.module.scss'
+import * as styles from './header.module.scss'
 
 export const Header = props => {
     useEffect(() => {

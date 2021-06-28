@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby'
 
-import styles from './postBox.module.scss'
+import * as styles from './postBox.module.scss'
 
 const PostBox = props => {
     return (

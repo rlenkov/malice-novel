@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, navigate } from 'gatsby'
 import Footer from '../components/footer'
 
-import styles from './404.module.scss'
+import * as styles from './404.module.scss'
 
 const NotFound = props => {
     return (
